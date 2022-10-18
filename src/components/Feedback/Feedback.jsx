@@ -1,16 +1,18 @@
 import PropTypes from 'prop-types'
+import { Button } from './Feedback.styled'
+
 
 export const Feedback = ({ options, onLeaveFeedback }) => (
   <div>
     {Object.keys(options).map(option => (
-      <button
+      <Button
         key={option}
         name={option}
         type="button"
         onClick={onLeaveFeedback}
       >
         {option}
-      </button>
+      </Button>
     ))}
   </div>
 )

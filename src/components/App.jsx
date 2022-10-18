@@ -8,12 +8,12 @@ class App extends Component {
   state = {
     good: 0,
     neutral: 0,
-    bad: 0
+    bad: 0,
   }
 
   onLeaveFeedback = e => { 
     this.setState(prevState => ({
-      [e.target.name]: prevState[e.target.name] + 1
+      [e.target.name]: prevState[e.target.name] + 1 
     }))
   }
 
@@ -31,12 +31,13 @@ class App extends Component {
     const { good, neutral, bad } = this.state
     const total = this.totalFeedback()
     const positive = this.positiveFeedbackPrecentage()
-    return(
+    return (
       <div className = 'feedback'>
         <Section title="Please leave your feedback">
           <Feedback
             options={this.state}
             onLeaveFeedback={this.onLeaveFeedback}
+            
           />
         </Section>
 

@@ -1,5 +1,3 @@
 import styled from "styled-components";
 
-export const StatData = styled.p`
-  
-`
+export const StatData = styled.p``
